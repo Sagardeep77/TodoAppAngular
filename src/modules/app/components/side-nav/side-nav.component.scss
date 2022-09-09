@@ -1,0 +1,13 @@
+.nav{
+    ul{
+        margin: 10px 10px;
+        padding-left: 20px;
+    }
+
+    .nav-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        cursor: pointer;
+    }
+}

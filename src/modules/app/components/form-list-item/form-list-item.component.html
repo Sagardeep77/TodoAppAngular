@@ -1,0 +1,21 @@
+<form #listItemForm="ngForm" (ngSubmit)="handleSubmitForm($event,listItemForm.value)">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input ngModel type="text" class="form-control" id="title" name="title">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea ngModel class="form-control" id="description" name="description"></textarea>
+    </div>
+    <div class="mb-3 ">
+      <label for="priority" class="form-label">Priority</label>
+
+        <select ngModel class="form-select" id="priority" name="priority">
+            <option selected value="average">Averge</option>
+            <option value="high">High</option>
+            <option value="critical">Critical</option>
+          </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="handleBack($event)">Cancel</button>
+  </form>

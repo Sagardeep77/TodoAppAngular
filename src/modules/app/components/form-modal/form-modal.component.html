@@ -1,0 +1,42 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':modalState ? 'block' : 'none'}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">GeeksForGeeks</h4>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 ">
+            <label for="item" class="form-label">To-do items</label>
+      
+              <select ngModel class="form-select" id="item" [(ngModel)]="itemId" name="item">
+                <option selected>Select one option</option>
+
+                <ng-container *ngFor="let item of todoList">
+                    <option [value]="item.id">{{item.title}}</option>
+                </ng-container>
+                </select>
+          </div>
+          <div class="mb-3 ">
+            <label for="category" class="form-label">Navigate to </label>
+              <select ngModel class="form-select" id="category" [(ngModel)]="category" name="category">
+                <option selected>Select one option</option>
+                  <option value="to-do">To-do</option>
+                  <option value="in-progress">In-progress</option>
+                  <option value="completed">Completed</option>
+                </select>
+          </div>
+          
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary" (click)="handleSubmit($event)">Submit</button>
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">Cancel</button>
+      
+      </div>
+    </div>
+  </div>
+</div>

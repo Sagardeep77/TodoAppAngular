@@ -1,0 +1,32 @@
+.dashboard-container{
+   flex-wrap: nowrap;
+}
+
+.side-nav-container{
+    min-width : 150px;
+    border : 1px  solid gray;
+    border-left: none;
+    box-shadow: 10px;
+    min-height : 100vh;
+}
+
+.main-container{
+    background-color: rgb(229, 226, 226);
+    min-height: 100vh;
+    .section{
+        display: flex;
+        align-items: center;
+    }
+    .left-section{
+        
+        input{
+            margin-left: 10px;
+        }
+    }
+    .right-section{
+        max-width: 300px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
