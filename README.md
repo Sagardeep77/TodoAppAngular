@@ -2,7 +2,9 @@
 # TodoApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.29.
+
 This project was generated with Node version version 17.8.0.
+
 This project was generated with npm version version 8.5.5.
 
 ## Development server
